@@ -2,6 +2,7 @@
 {
     background-image: linear-gradient(#bdfcfc, #20f8e6);
     background-size: auto;
+    margin: 30px;
 }
     
 header + h2, hr + h2{
@@ -32,6 +33,10 @@ h3 {
     width: 100px;
     }
 
+.menu{
+    padding-left: 150px;
+}
+
 .footer{
     font-size: 18px;
     text-transform: uppercase;
@@ -45,6 +50,7 @@ h3 {
     font-size: 19px;
     font-style: normal;
     gap: 45px;
+    padding-left: 50px;
 }
 
 #list:visited{
