@@ -4,24 +4,25 @@
         <meta charset="UTF-8">
         <meta name="description" content="Форматы графических файлов - это система хранения изображения на носителе">
         <meta name="keywords" content="JPEG, LZW, RLE, GIF, PNG, компрессия, алгоритмы сжатия">
-        <!--link rel="stylesheet" href="style.css"-->
+        <link rel="stylesheet" href="./style/index.css">
+        <link rel="stylesheet" href="./style/main-page.css">
         <title>Форматы графических файлов</title>
     </head>
     <body class="body">
-       <header class="header"> 
+       <header> 
+        <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" class="logo" style="float: left; width: 100px; margin-right: 3mm;"> 
         <h1>Форматы графических файлов</h1>
-        <section class="logo">
-            <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" width="110" height="101"> 
-        </section>
-        <nav class="nav">
-        <ul >
+    </header> 
+        <nav>
+        <ul>
             <li> <a href="page2.html">Алгоритмы сжатия и интересные факты </a></li>
             <li> <a href="literature.html">Список литературы</a></li>
         </ul>
         </nav>
+
         <hr>
         <h2 class="about"> Общая информация</h2>
-       </header> 
+
        <main>
         <section class="info">
            <p> <dfn><strong>Графический формат</strong></dfn> ‒ это система хранения изображения на носителе</p>
@@ -32,23 +33,23 @@
                     спутников, содержит, кроме изображения, такую специфическую информацию, как время и дату 
                     фотографирования, тип спутника, вид оборудования, которым был произведен снимок и т. п.) </p>
         </section>
-        <nav class="list">
+        <nav >
             <ul>
-                <li >Форматы растровой графики
-                <ul>
+                <li class="dropdown">Форматы растровой графики
+                <ul class="dropdown-content">
                 <li type="desc"><abbr title="Joint Photograffic Group">JPG</abbr></li>
                 <li type="desc"><abbr title="Graphic Interchange Format">GIF </abbr></li>
                 <li type="desc"><abbr title="Portable Network Graphics">PNG</abbr></li>
                 <li type="desc"><abbr title="Taged Image File Format">TIFF</abbr></li>
             </ul></li> 
-                <li >Форматы векторной графики 
-                    <ul>
+                <li class="dropdown">Форматы векторной графики 
+                <ul class="dropdown-content">
                 <li type="desc"><abbr title="Adobe Illustrator">AI</abbr></li>
                 <li type="desc"><abbr title="Standard Dynamic Range">CDR</abbr></li>
                 <li type="desc"><abbr title="Scalable Vector Graphics">SVG</abbr></li>
             </ul></li>
-                <li >Смешанные форматы
-                <ul>
+                <li class="dropdown">Смешанные форматы
+                <ul class="dropdown-content">
                     <li type="desc"><abbr title="Portable Document Forma">PDF</abbr></li>
                     <li type="desc"><abbr title="Encapsulated PostScript">EPS</abbr></li>
                 </ul></li>
@@ -83,7 +84,7 @@
             </section>
        </main>
        <hr>
-       <footer class="page-footer">
+       <footer class="footer">
             Лабораторная по веб технологиям выполнена Казаковой Полиной группа М011
        </footer>
     </body>

@@ -2,21 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!--link rel="stylesheet" href="style.css"-->
+        <link rel="stylesheet" href="./style/index.css">
+        <link rel="stylesheet" href="style/page2.css">
         <title>Форматы графических файлов</title>
+        <style>
+            tr:hover {
+                background: #65994c; 
+                color: #fff;
+            }
+        </style>
     </head>
     <body class="body">
-        <div class="header">
+        <div>
+            
+            <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" class="logo" style="float: left; width: 100px; margin-right:3mm; margin-bottom: 5mm;"> 
             <h1>Форматы графических файлов</h1>
-        <section class="logo">
-            <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" width="110" height="101"> 
-        </section>
-        <div class="nav">
+        </div>
+            <div class="nav">
         <ul >
             <li> <a href="main_page.html">Общая информация </a></li>
             <li><a href="literature.html">Список литературы</a></li>
         </ul>
-        </div>
+
         <hr>
         <h2 class="about"> Алгоритмы сжатия данных и интересные факты</h2>
             <h3>Алгоритм сжатия RLE (Run — Length Encoding)</h3>
@@ -82,19 +89,18 @@
                         <col style="width: 250px;">
                         <col style="width: 100px;">
                         <col style="width: 120px;">
+                        <col style="width: auto;">
                         </colgroup>
                     <thead>
-                        <tr> <th>Наименование формата</th>  <th>Расширение</th> <th>Алгоритм сжатия</th></tr> 
+                        <tr> <th>Наименование формата</th>  <th>Расширение</th> <th>Алгоритм сжатия</th> <th>Пример фотографии</th></tr> 
                     </thead>
                     <tbody>
-                        <tr> <td> Portable Network Graphics </td> <td> PNG </td><td> Deflate</td></tr>
-                        <tr> <td> Taged Image File Format </td> <td> TIFF </td><td rowspan = 2> LZW</td></tr>
-                        <tr> <td> Graphic Interchange Format </td> <td> GIF </td></tr>
-                        <tr><td>Joint Photograffic Experts Group</td><td>JPG, JPEG</td><td>JPEG</td></tr>
+                        <tr> <td> Portable Network Graphics </td> <td> PNG </td><td> Deflate</td><td><img src="img/free-png.ru-63.png" class="table-img"></td></tr>
+                        <tr> <td> Taged Image File Format </td> <td> TIFF </td><td rowspan = 2> LZW</td><td></td></tr>
+                        <tr> <td> Graphic Interchange Format </td> <td> GIF </td><td><img src="img/3d08c76993479bc36410cc5b6154aefd.gif" class="table-img" ></td></tr>
+                        <tr><td>Joint Photograffic Experts Group</td><td>JPG, JPEG</td><td>JPEG</td><td><img src="img/movietalk-despicableme630-jpg_002144.jpg" class="table-img"></td></tr>
                     </tbody>
                     </table><br>
-
-                    
         <h3>Факты и домыслы</h3>
         <div>
             1. JPEG теряет качество при открытии и повторном сохранении файла.</div>
@@ -115,7 +121,7 @@
                 <div><mark>Неправда.</mark> У них разная область применения. В общем случае, типичная «гифовская» картинка после конвертирования в 
                     JPEG будет иметь больший объем.</div>
             <hr>
-            <div>Лабораторная по веб технологиям выполнена Казаковой Полиной группа М011
+            <div class="footer">Лабораторная по веб технологиям выполнена Казаковой Полиной группа М011
         </div>
 
     </body>

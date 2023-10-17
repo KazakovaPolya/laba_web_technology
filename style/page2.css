@@ -1,0 +1,29 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+    
+th, td {
+    border: 1px solid rgb(0, 0, 0);
+    vertical-align: middle;
+    text-align: center;
+}
+
+caption {
+    text-transform: uppercase;
+    font-size: 24px;
+    }
+    
+caption::first-letter {
+    font-size: 48px;
+    color: rgb(216, 29, 107);
+    font-weight: 800;
+    }
+
+.table-img{
+    display: block;
+    margin-left: auto;
+    width: 80px; 
+    margin-right: auto;
+
+}
