@@ -55,7 +55,7 @@ h3 {
     padding-left: 50px;
 }
 
-#list ul li a:visited{
+#list :visited{
     color: #ff7b00;
     text-decoration: underline;
 }
