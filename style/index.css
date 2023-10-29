@@ -55,8 +55,8 @@ h3 {
     padding-left: 50px;
 }
 
-#list:visited{
+#list:link{
     color: blue;
-    text-decoration: underline;
+    text-decoration: underline wavy;
 }
 
