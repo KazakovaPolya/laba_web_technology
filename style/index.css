@@ -1,8 +1,12 @@
+* {
+    font-family: sans-serif;
+}
+
 .body
 {
     line-height: 1.5;
     font-size: 1.2em;
-    background-image: linear-gradient(#bdfcfc, #20f8e6);
+    background-image: linear-gradient(#bdfcfc, #8efbf2);
     background-size: auto;
     margin: 30px;
 }
@@ -55,8 +59,8 @@ h3 {
     padding-left: 50px;
 }
 
-#list:link{
-    color: blue;
-    text-decoration: underline wavy;
+#list:visited{
+    color: #ff7b00;
+    text-decoration: underline;
 }
 

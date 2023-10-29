@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Форматы графических файлов - это система хранения изображения на носителе">
+        <meta name="keywords" content="JPEG, LZW, RLE, GIF, PNG, компрессия, алгоритмы сжатия">
+        <link rel="stylesheet" href="./style/index.css">
+        <link rel="stylesheet" href="./style/main-page.css">
+        <link rel="stylesheet" href="./style/js.css">
+        <title>Редактор Java Script</title>
+        <style>
+            canvas {
+              border: 1px dashed #059595;
+              background-color: #bff6f6;
+            }
+          </style>
+      
+          <script>
+            function clear_holst() {
+              var canvas = document.getElementById("drawingCanvas");
+              var context = canvas.getContext("2d");
+              context.clearRect(0, 0, 600, 200);
+            }
+          </script>
+    </head>
+    <body class="body">
+        <header> 
+         <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" class="logo" style="float: left; width: 100px; margin-right: 3mm;"> 
+         <h1>Форматы графических файлов</h1>
+     </header> 
+         <nav>
+         <ul class="menu">
+            <li> <a href="main_page.html">Главная страница</a></li>
+             <li> <a href="page2.html">Алгоритмы сжатия и интересные факты </a></li>
+             <li> <a href="literature.html">Список литературы</a></li>
+         </ul>
+         </nav>
+ 
+         <hr>
+         <h2 class="about"> Редактор JavaScript</h2>
+         <p>Введите текст программы на javascript:</p>
+         <textarea class="mycode" id="code1" rows=10 cols=40></textarea>
+         <p>Результат:<p>
+         <textarea id="myrezult" rows=3 cols=40></textarea> <br/>
+         
+         <button onclick= "document.getElementById('myrezult').value =
+         eval(document.getElementById('code1').value)">
+         Выполнить
+         </button>
+         <button onclick=
+         "document.getElementById('code1').value='';
+         document.getElementById('myrezult').value=''"> Очистить</button >
+        <hr>
+        <table border="0">
+            <tr>
+            <td>Введите текст программы на javascript:</td>
+            <td>Отображение рисунка:</td>
+            </tr>
+            <tr>
+            <td width="70%"><textarea id="code2" class="mycode"></textarea></td>
+            <td>
+                <canvas id="drawingCanvas" width="400" height="300">Ваш браузер не поддерживает canvas</canvas>
+            </td>
+            </tr>
+        </table>
+        <button onclick="eval(document.getElementById('code2').value)">
+            Отобразить рисунок
+        </button>
+        <hr>
+        <main>
+        <footer class="footer">
+            Лабораторная по веб технологиям выполнена Казаковой Полиной группа М011
+       </footer>
+</body>
+</html>
