@@ -26,5 +26,22 @@ caption::first-letter {
     margin-left: auto;
     width: 80px; 
     margin-right: auto;
+}
 
+.add_row{
+    display: grid;
+    justify-content: space-around;
+    font-size: 24px;
+    justify-items: center;
+}
+
+
+
+.add_p{
+    text-align: center;
+}
+
+#inputs-for-table{
+    margin-left: 248px;
+    margin-top: 0;
 }

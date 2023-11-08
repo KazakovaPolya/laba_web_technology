@@ -7,22 +7,47 @@
         <link rel="stylesheet" href="./style/index.css">
         <link rel="stylesheet" href="./style/main-page.css">
         <title>Форматы графических файлов</title>
+        <script  type= "text/javascript">
+            let Clock = function()
+            {   
+            let  datecur, hour, minute;     
+            let time ="";
+            datecur = new Date();
+            hour = datecur.getHours();
+            minute= datecur.getMinutes();
+            sec = datecur.getSeconds();
+            time  = ((hour <10) ? ":0" : "" ) + hour;
+            time  += ((minute <10) ? ":0" : ":" ) +  minute;
+            time  += ((sec <10) ? ":0" : ":" ) +  sec;
+            tmr = document.getElementsByTagName("aside")[0];
+            tmr.innerText = time; 
+            (minute%2==0) ? document.getElementsByTagName("aside")[0].style.color='red': 
+            document.getElementsByTagName("aside")[0].style.color='blue';
+            }
+            let author= function()
+            {
+                alert("Казакова Полина группа М011");
+            }
+            let color_button = () => document.getElementsByTagName("button")[0].style.backgroundColor="rgb(128 255 245)";
+            let zoom_element=()=>document.getElementsByTagName("h2")[0].style.fontSize='50px';
+            </script> 
     </head>
     <body class="body">
        <header> 
         <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" class="logo" style="float: left; width: 100px; margin-right: 3mm;"> 
         <h1>Форматы графических файлов</h1>
-    </header> 
-        <nav>
-        <ul class="menu">
-            <li> <a href="page2.html">Алгоритмы сжатия и интересные факты </a></li>
-            <li> <a href="js1.html">Редактор JavaScript</a></li>
-            <li> <a href="literature.html">Список литературы</a></li>
-        </ul>
+        <nav class="hat">
+            <aside id="clock" onmousemove="Clock()" onmouseout="innerHTML='Время', style.color='black'">Время</aside>
+            <ul class="menu">
+                <li> <a href="page2.html">Алгоритмы сжатия и интересные факты </a></li>
+                <li> <a href="js1.html">Редактор JavaScript</a></li>
+                <li> <a href="literature.html">Список литературы</a></li>
+            </ul>
         </nav>
-
+        <button class="author" onclick="author()" onmousemove="color_button()" onmouseout="style.backgroundColor='rgb(214 240 238)'">Автор сайта</button>
+    </header> 
         <hr>
-        <h2 class="about"> Общая информация</h2>
+        <h2 class="about" onmousemove="zoom_element()" onmouseout="style.fontSize='36px'"> Общая информация</h2>
 
        <main>
         <section class="info">
@@ -34,7 +59,7 @@
                     спутников, содержит, кроме изображения, такую специфическую информацию, как время и дату 
                     фотографирования, тип спутника, вид оборудования, которым был произведен снимок и т. п.) </p>
         </section>
-        <nav >
+        <nav id="nav" >
             <ul>
                 <li class="dropdown">Форматы растровой графики
                 <ul class="dropdown-content">
@@ -56,6 +81,8 @@
                 </ul></li>
             </ul>
         </nav>
+        <input id="new-item-input" type="text">
+        <button id="add-button">Добавить элемент</button>
         <hr>
         <section class="compression">
             <h3>Сжатие (compression)</h3>
@@ -86,7 +113,38 @@
        </main>
        <hr>
        <footer class="footer">
-            Лабораторная по веб технологиям выполнена Казаковой Полиной группа М011
+            Лабораторная по веб технологиям
        </footer>
+       <script type="text/javascript">
+        const array = []
+        const nav = document.getElementsByTagName("nav")[1]
+        const input = document.getElementsByTagName("input")[0]
+        const addButton = document.getElementsByTagName("button")[1]
+        addButton.addEventListener('click' , addArrayItem)
+        
+        function addArrayItem() {
+            const ul = document.createElement("ul")
+            const li = document.createElement("li")
+            const deleteButton = document.createElement("button")
+            deleteButton.innerHTML = "Удалить"
+            deleteButton.setAttribute("id" , array.length + 1)
+            deleteButton.addEventListener("click" , (event) => deleteArrayItem(event))
+            deleteButton.style.marginLeft="10px"
+            li.innerHTML = input.value
+            li.appendChild(deleteButton)
+            ul.appendChild(li)
+            array.push({
+                id: array.length,
+                value: ul
+            })
+            ul.setAttribute("id" , array.length)
+            nav.appendChild(ul)   
+        }
+        const deleteArrayItem = (item) => {
+            const removeItem = document.getElementById(item.target.id)
+            array.splice(array.findIndex(v => v.id == item.target.id) , 1)
+            removeItem.remove()
+        }
+       </script>
     </body>
 </html>
