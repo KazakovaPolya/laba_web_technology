@@ -1,0 +1,78 @@
+<HTML>
+    <head>
+    <TITLE>Survey</TITLE>
+    <meta charset="utf-8"> 
+    </head>
+    <link rel="stylesheet" href="./style/index.css" type="text/css">
+    <script  type= "text/javascript" src="./script/clock.js"></script>
+    <header class="header"> 
+        <img src="img/kak-sdelat-sajt-na-tilde-obzor-konstruktora-i-poshagovaya-instrukcziya-—-kopiya-1024x576.jpg" class="logo" style="float: left; width: 100px; margin-right: 3mm;"> 
+        <h1>Форматы графических файлов</h1>
+        <nav class="hat">
+            <aside id="clock" onmousemove="Clock()">Время</aside>
+            <ul class="menu">
+                <li> <a href="main_page.html">Общая информация</a></li>
+                <li> <a href="page2.html">Алгоритмы сжатия и интересные факты </a></li>
+                <li> <a href="js1.html">Редактор JavaScript</a></li>
+                <li> <a href="literature.html">Список литературы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body class="body">
+    <H1>Анкета пользователя</H1>
+    <HR>
+    <FORM method="POST" action="/cgi-bin/form.py" id="my_form">
+    <H3>Заполните форму и нажмите кнопку</H3>
+    <P><TABLE>
+    <TR>
+    <TH align=right>Имя:
+    <TD> <input type=text name=name>
+    <TR>
+    <TH align=right>Фамилия:
+    <TD> <input type=text name=surname>
+    <TR>
+    <TH align=right>Отчество:
+     <TD> <input type=text name=patr>
+     <TR>
+     <TH align=right>Любимый тип графических файлов:
+     <TD><table>
+     <td><input type=radio name=filetype value=Растровый>Растровый
+     <td><input type=radio name=filetype value=Векторный>Векторный
+     <td><input type=radio name=filetype value=Метаформат>Метаформат
+     <td><input type=radio name=filetype value=Другой>Другой
+     </table>
+     <TR>
+     <TH align=right>Статус пользователя:
+     <TD><select name=job>
+     <option>гость
+     <option>пользователь
+     <option>модератор
+     </select>
+    <TR>
+     <TH align=right>Используемые графические редакторы:
+     <TD><table>
+     <td><input type=checkbox name=prog value=Photoshop>Photoshop
+     <td><input type=checkbox name=prog value=GIMP>GIMP
+     <td><input type=checkbox name=prog value=Inkscape>Inkscape
+     <tr>
+     <td><input type=checkbox name=prog value=Paint>Paint 
+     <td><input type=checkbox name=prog value=Krita>Krita
+     <td><input type=checkbox name=prog value=CorelDRAW>CorelDRAW
+     </table>
+    <tr hidden="hidden">
+    <th >Комментарий:</th>
+    <td><textarea name=comment></textarea></td>
+    </tr>
+     <TR>
+     <TD colspan=2 align=center>
+     <input type=submit value="ОТПРАВИТЬ">
+     </TABLE>
+    </P>
+     </FORM>
+     <HR>
+    </body>
+     <footer class="footer">
+        Лабораторная по веб технологиям
+   </footer>
+    <script type= "text/javascript" src = "./script/CheckInput.js"></script>
+    </HTML>
