@@ -12,7 +12,6 @@ html1 = """
 <H1>Анкета пользователя</H1>
 <table class="tbl_back">
 """
-f = open("a.txt", "a", encoding="utf-8")
 # печать заголовка таблицы
 print (html1)
 
@@ -32,11 +31,13 @@ for field in ('name', 'surname', 'patr', 'filetype', 'job', 'prog'):
         else:
             values = [x.value for x in form[field]]
             data[i] = ' and '.join(values)
-    f.write(data[i] + " ")
     i+=1
-f.write("\n")
-f.close()
+f = open("a.txt", "a", encoding="utf-8")
+
 for el in data:
    print ('<td> %s </td>'% el)
+   f.write(el + " ")
+f.write("\n")
+f.close()
 print ('</tr> </table>')
 print('</body>')

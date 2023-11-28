@@ -1,7 +1,6 @@
 function serializeForm(formNode) {
     let radio_check = 0;
     let text_check = 1;
-    let password_check = 1;
     let checkbox_check = 0;
 
     data = Array.from(formNode)
@@ -25,7 +24,7 @@ function serializeForm(formNode) {
 
             return { name, value }
         })
-    if (text_check && radio_check && password_check && checkbox_check)
+    if (text_check && radio_check && checkbox_check)
         return data;
     alert("Заполниите все поля")
     return []
@@ -33,17 +32,9 @@ function serializeForm(formNode) {
 
 function check_input(event) {
     data = serializeForm(applicantForm)
-    if (data.length)
-        sendData(new FormData(my_form));
-    else
+    if (!data.length)
         event.preventDefault()
 }
 
-async function sendData(data) {
-    return await fetch('../cgi-bin/form.py', {
-        method: 'POST',
-        body: data,
-    })
-}
 const applicantForm = document.getElementById('my_form');
 applicantForm.addEventListener('submit', check_input)
